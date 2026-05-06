@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginBox">
+    <h2>Admin Login</h2>
+    <input type="password" id="pass" placeholder="Parol">
+    <button onclick="login()">Kirish</button>
+</div>
+
+<div id="adminPanel" style="display:none">
+
+    <h1>Admin Panel</h1>
+
+    <button onclick="window.location='user.html'">User sahifa</button>
+
+    <h2>To'lov qo'shish</h2>
+
+    <input id="fullname" placeholder="Ism familiya">
+    <input id="order" placeholder="Tartib">
+    <input id="paymentFor" placeholder="Nima uchun">
+    <select id="checked">
+        <option value="true">To'langan</option>
+        <option value="false">To'lanmagan</option>
+    </select>
+
+    <button onclick="addTask()">Qo'shish</button>
+
+    <div id="list"></div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP -->
+    <div class="top">
+
+        <h2>Admin Panel</h2>
+
+        <button onclick="window.location.href='index.html'">
+            User sahifa
+        </button>
+
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+
+        <!-- DESIGN -->
+        <div class="card">
+
+            <h3>Sayt dizayni</h3>
+
+            <input type="text" id="title" placeholder="Sarlavha">
+
+            <input type="color" id="color">
+
+            <textarea id="desc" placeholder="Tavsif"></textarea>
+
+            <button class="save" onclick="saveDesign()">
+                Saqlash
+            </button>
+
+            <div class="preview" id="preview"></div>
+
+        </div>
+
+        <!-- ADD TASK -->
+        <div class="card">
+
+            <h3>To‘lov qo‘shish</h3>
+
+            <input type="text" id="name" placeholder="Ism familiya">
+
+            <input type="text" id="order" placeholder="Tartib raqam">
+
+            <input type="text" id="reason" placeholder="Nima uchun to‘lov">
+
+            <select id="status">
+                <option value="true">✔ To‘langan</option>
+                <option value="false">✖ To‘lanmagan</option>
+            </select>
+
+            <button class="save" onclick="addTask()">
+                Qo‘shish
+            </button>
+
+        </div>
+
+        <!-- TASK LIST -->
+        <div id="list"></div>
+
+    </div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
